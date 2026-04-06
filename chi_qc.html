@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全港華文雙語菁英問答比賽｜文章重點總覽 (編號5-150)</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', '微軟正黑體', 'Noto Sans CJK TC', system-ui, sans-serif;
+            background: #f0ede5;
+            margin: 0;
+            padding: 28px 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #fffdf9;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.12);
+            overflow: hidden;
+            border: 1px solid #e2d9ca;
+        }
+        .header {
+            background: #8b3c2a;
+            color: #ffefcf;
+            padding: 22px 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .header p {
+            margin: 8px 0 0;
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+        .toolbar {
+            background: #fef1df;
+            padding: 16px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #e7dbbc;
+        }
+        .filter-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: #f3e5cd;
+            border: none;
+            padding: 8px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #5a3e2a;
+            font-family: inherit;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .filter-btn.active {
+            background: #9b5e2c;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .search-box {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-box input {
+            width: 100%;
+            max-width: 300px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid #cfc5ae;
+            background: white;
+            font-size: 0.9rem;
+            outline: none;
+            font-family: inherit;
+        }
+        .stats {
+            font-size: 0.85rem;
+            background: #e8e0cf;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 30px;
+            color: #4f3a24;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #f4ebda;
+            font-size: 1.1rem;
+            padding: 18px 20px;
+            text-align: center;
+            border-bottom: 2px solid #decfa8;
+            width: 24%;
+            color: #3c2a1c;
+        }
+        td {
+            vertical-align: top;
+            padding: 20px 24px;
+            border-bottom: 1px solid #ece1cf;
+            background-color: #ffffff;
+        }
+        .cat-tag {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .cat-趣味語文 {
+            background: #e5f2e8;
+            color: #1e6f5c;
+            border-left: 4px solid #2a9d8f;
+        }
+        .cat-中國語文教育 {
+            background: #fbe9d2;
+            color: #b1622c;
+            border-left: 4px solid #e76f51;
+        }
+        .article-num {
+            font-weight: 800;
+            font-size: 1rem;
+            background: #f0ede8;
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+        }
+        ul {
+            margin: 6px 0 0 0;
+            padding-left: 1.2rem;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        .footnote {
+            background: #faf6ea;
+            padding: 14px 24px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #7f684c;
+            border-top: 1px solid #e5dac2;
+        }
+        @media (max-width: 750px) {
+            th, td { display: block; width: 100%; }
+            th { border-bottom: none; padding: 14px; }
+            td { border-bottom: 2px solid #e0d2bb; }
+            .toolbar { flex-direction: column; align-items: stretch; }
+            .search-box input { max-width: 100%; }
+        }
+        .highlight { background-color: #fff0c0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📖 全港華文雙語菁英問答比賽 · 文章重點總覽</h1>
+        <p>編號 5–150 | 中國語文教育 · 趣味語文 | 點列全文精華、出處、定義、別稱、典故</p>
+    </div>
+    <div class="toolbar">
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">📚 全部文章</button>
+            <button class="filter-btn" data-filter="中國語文教育">✍️ 中國語文教育</button>
+            <button class="filter-btn" data-filter="趣味語文">🎭 趣味語文</button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 搜尋關鍵字 (成語/部首/歇後語/詩詞/錯別字...)" autocomplete="off">
+        </div>
+        <div class="stats" id="statsCount">載入中...</div>
+    </div>
+    <table id="articlesTable">
+        <thead><tr><th>📄 編號 · 類別</th><th>✨ 內容重點（點列式）</th></tr></thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <div class="footnote">
+        ✅ 完整收錄編號5至150，按編號順序排列，涵蓋漢字結構、粵普比較、成語文化、詩詞賞析、錯別字辨析、古今詞義等。<br>
+        📌 點擊類別按鈕可篩選；搜尋欄可即時檢索內文重點。
+    </div>
+</div>
+
+<script>
+    // ======================= 完整資料庫 (按id升序，明確分類) =======================
+    const articlesData = [
+        // 5-8 中國語文教育
+        { id:5, category:"中國語文教育", title:"漢字之結構及部首組成", author:"金夢瑤博士", points:["📌 倉頡傳說：黃帝史官，文字整理者。","📌 初多象形，現90%以上形聲字。","📌 偏旁≠部首。","📌 人體部首：人/子/手/辵/目/口。","📌 九種結構：上下/左右/全包圍等。","📌 筆劃具重力張力，體現整體性。"] },
+        { id:6, category:"中國語文教育", title:"粤普讀音、詞彙及語法之異同", author:"賴志成博士", points:["🎙️ 粵語九聲六調，普通話四聲。","🎙️ 粵拼56韻母，同音字較少。","🎙️ 粵語字>120個，口語重疊詞(白雪雪)。","🎙️ 量詞：一揪、一執。","🎙️ 古漢語保留：係、幾時(李煜/蘇軾)。","🎙️ 語法：你行先、A形容詞過B。"] },
+        { id:7, category:"中國語文教育", title:"成語是彼此的心領神會", author:"王嬋娟女士", points:["🌟 中英對應：Rain cats and dogs/傾盆大雨。","🌟 古今成語：守株待兔/庖丁解牛/聞雞起舞。","🌟 漢字文化圈：日文臥薪嘗膽、韓語有備無患、越南馬到成功。"] },
+        { id:8, category:"中國語文教育", title:"文章體裁及修辭手法", author:"章海英女士", points:["✍️ 文體分類：文學/一般/實用文。","✍️ 小說可虛構，記敘文須真實。","✍️ 古代辨體：表/說/銘/記/賦。","✍️ 記敘文六要素，論說文論點論據。","✍️ 修辭根基：觀察與思考。"] },
+        // 9-41 趣味語文（大部分歇後語、俚語、成語典故）
+        { id:9, category:"趣味語文", title:"廣東話歇後語五則", author:"比賽趣味題", points:["老和尚打傘—無法無天","鐵拐李踢足球—一腳踢","太公分豬肉—人人有份","竹籃打水—一場空","狗咬呂洞賓—不識好人心"] },
+        { id:10, category:"趣味語文", title:"猪八戒照鏡 — 裡外不是人", author:"歇後語趣談", points:["豬八戒豬頭人身，鏡內外皆非人樣","比喻兩面唔討好、左右為難"] },
+        { id:11, category:"趣味語文", title:"黃皮樹了哥 · 老鼠拉龜", author:"廣東話歇後語三", points:["黃皮樹了哥—唔熟唔食","老鼠拉龜—冇掟埋手"] },
+        { id:12, category:"趣味語文", title:"半啖荔枝 — 歇後語前奏", author:"粵語俗語", points:["源於蘇東坡「日啖荔枝三百顆」","啖為粵語量詞","完整見編號24：半啖荔枝—把火"] },
+        { id:13, category:"趣味語文", title:"司馬昭之心 — 路人皆知", author:"歇後語有段故", points:["三國魏司馬昭圖謀篡位","比喻野心人人皆知"] },
+        { id:14, category:"趣味語文", title:"姜太公釣魚 — 願者上釣", author:"歇後語有段故二", points:["姜尚直鉤離水三尺釣魚","喻心甘情願上當"] },
+        { id:15, category:"趣味語文", title:"泥菩薩過江 · 閻羅王嫁女 · 壽星公吊頸", author:"歇後語滿天神佛", points:["泥菩薩過江—自身難保","閻羅王嫁女—搵鬼要","壽星公吊頸—嫌命長"] },
+        { id:16, category:"趣味語文", title:"粵語俚語小集 — 唔使問阿貴等", author:"綜合趣味", points:["唔使問阿貴：清末巡撫柏貴無能","呃鬼食豆腐：書生騙鬼/諧音「渣符」"] },
+        { id:17, category:"中國語文教育", title:"李白的床 — 《靜夜思》新詮", author:"區仲桃博士", points:["「床」非寢具，古代無玻璃窗","李白出生碎葉城","「床」應為胡床(可折疊椅子)"] },
+        { id:18, category:"趣味語文", title:"火燒旗杆 · 狐狸吵架 · 老公撥扇", author:"歇後語同音字", points:["火燒旗杆—長炭(長嘆)","狐狸吵架—一派胡言","老公撥扇—淒涼(妻涼)"] },
+        { id:19, category:"趣味語文", title:"更多粵語歇後語補充", author:"星島菁英比賽", points:["整合諧音/歷史/民俗歇後語"] },
+        { id:20, category:"趣味語文", title:"大肚婆過獨木橋 · 抬棺材甩褲", author:"歇後語集錦", points:["大肚婆過獨木橋—挺兒走險","抬棺材甩褲—失禮死人"] },
+        { id:21, category:"趣味語文", title:"鮑死荷蘭豆 · 醉酒佬揸車 · 水鬼升城隍", author:"暴露年齡歇後語", points:["鮑死荷蘭豆—自以為是","醉酒佬揸車—橫衝直撞","水鬼升城隍—小人得志"] },
+        { id:22, category:"中國語文教育", title:"文學家趣聞 — 葉靈鳳與藏書票", author:"施偉諾先生", points:["葉靈鳳雅好藏書","藏書票以鳳凰置中，印有「靈鳳藏書」","香港中央圖書館曾展出"] },
+        { id:23, category:"趣味語文", title:"常用廣東話歇後語、俚語及其涵義（上）", author:"黃奕女士", points:["老虎頭上叮虱—找死","過街老鼠—人人喊打","有掩雞籠—自出自入","留謎題：半啖荔枝"] },
+        { id:24, category:"趣味語文", title:"常用廣東話歇後語、俚語及其涵義（下）", author:"黃奕女士", points:["半啖荔枝—把火：蘇東坡詩＋李時珍《本草綱目》","你有張良計，我有過牆梯","《季前賽》改編《六國論》"] },
+        { id:25, category:"趣味語文", title:"唔使問阿貴 — 來源與典故", author:"粵語俚語", points:["清末廣東巡撫柏貴無能","形容事情明顯，毋須再問"] },
+        { id:26, category:"趣味語文", title:"呃鬼食豆腐 — 鬼故與諧音", author:"粵語俗語", points:["書生騙鬼豆腐比人肉美味","原為「呃鬼食渣符」音近演變"] },
+        { id:27, category:"趣味語文", title:"盲拳打死老師傅", author:"粵語俚語", points:["新手不按常理出牌出奇制勝","典故：拳師與老婆比武"] },
+        { id:28, category:"趣味語文", title:"老虎頭上捉蝨 — 找死／嫌命長", author:"粵語俚語", points:["老虎頭上捉蝨—找死","與「買棺材唔知掟」同義"] },
+        { id:29, category:"趣味語文", title:"食過夜粥 — 有功夫底子", author:"粵語俚語", points:["舊時廣州習武風氣，深夜食粥補充體力","引申為有功夫底子"] },
+        { id:30, category:"趣味語文", title:"方帽大個頭唔好戴咁大頂帽 — 不自量力", author:"粵語俚語", points:["頭小戴大帽遮擋視線","對應成語：蚍蜉撼樹"] },
+        { id:31, category:"趣味語文", title:"倒瀉籮蟹 — 手忙腳亂／狼狽不堪", author:"粵語俚語", points:["裝蟹籮筐打翻，蟹四處逃散","形容人手足無措"] },
+        { id:32, category:"趣味語文", title:"定過抬油 — 非常鎮定", author:"粵語俚語", points:["古時賣油郎挑擔手穩心定","形容沉著不緊張"] },
+        { id:33, category:"趣味語文", title:"狼過華秀隻狗 — 心狠手辣", author:"粵語俚語", points:["佛山茶葉商華秀的狗兇猛","形容人殘暴至極"] },
+        { id:34, category:"趣味語文", title:"清官難審家庭事 — 家家有本難唸的經", author:"粵語俗語", points:["出自明代馮夢龍《喻世明言》","家庭內部複雜，外人難斷"] },
+        { id:35, category:"趣味語文", title:"大石砸死蟹 — 強權下無反抗", author:"粵語俚語", points:["蟹被大石壓住動彈不得","形容被迫屈服於強權"] },
+        { id:36, category:"趣味語文", title:"跌落地揦返拃沙 — 死要面子", author:"粵語俚語", points:["出醜後執沙掩飾","諷刺人死要面子"] },
+        { id:37, category:"趣味語文", title:"關公喝酒 — 唔怕面紅", author:"歇後語趣談", points:["關公臉本偏紅，飲酒不顯紅","引申：酒量好/不知醜","飲酒面紅與酒量無關"] },
+        { id:38, category:"趣味語文", title:"陵柴廷相 — 唔哀聲哀", author:"歇後語趣談", points:["民國軍閥陵柴廷裝寒酸占卜","相士批『唔哀聲哀』，諷刺裝窮酸反招衰運"] },
+        { id:39, category:"趣味語文", title:"單料銅煲 — 滾就熟", author:"歇後語趣談", points:["銅煲導熱快，薄銅煲一滾就熟","形容人容易混熟、一見如故"] },
+        { id:40, category:"趣味語文", title:"鴻鵠之志 — 陳勝典故", author:"成語典故", points:["出自《史記·陳涉世家》","陳勝少時『燕雀安知鴻鵠之志』","後與吳廣揭竿起義","比喻人有遠大志向"] },
+        { id:41, category:"趣味語文", title:"黃粱一夢 — 榮華虛幻", author:"成語典故", points:["出自唐傳奇《枕中記》","盧生夢歷榮華，醒來黃粱未熟","比喻人生如夢，名利不必執著"] },
+        { id:42, category:"中國語文教育", title:"參考資料 / 分類索引", author:"比賽彙整", points:["📑 中國語文教育及趣味語文兩大類別整合索引。"] },
+        { id:43, category:"中國語文教育", title:"彊、勥、強混同為一 — 古今詞義大不同", author:"謝向榮教授", points:["今日「強大」「勉強」皆用「強」字，古時三字有別：『強』本義蛀米蟲，『彊』从弓表強大，『勥』从力表勉強","段玉裁注：「彊者有力，勥者以力相迫。」"] },
+        { id:44, category:"趣味語文", title:"濫竽充數 — 無真才實學混日子", author:"成語典故", points:["出自《韓非子》","南郭先生混入吹竽隊，齊湣王改獨奏後逃竄","諷刺無真才實學混日子"] },
+        { id:45, category:"趣味語文", title:"囫圇吞棗 — 不加分析全盤接收", author:"成語典故", points:["食棗不咀嚼整粒吞下","古時自以為是者吞棗致腹脹","比喻學習知識不加分析"] },
+        { id:46, category:"趣味語文", title:"沐猴而冠 — 虛有其表", author:"成語典故", points:["出自《史記·項羽本紀》","項羽入咸陽後欲返鄉，旁人譏其如沐猴而冠","比喻徒具儀表而無真本領"] },
+        { id:47, category:"中國語文教育", title:"華文雙語的過去、現在與未來【過去篇：正歷史】", author:"陳健榮博士", points:["「華文」指華人書寫文字，「雙語」指粵語與普通話","詞義辨正：慘淡經營、差強人意","名句溯源：食色性也、酒肉穿腸過"] },
+        { id:48, category:"趣味語文", title:"臨淵羨魚 — 不如退而結網", author:"成語典故", points:["出自漢朝董仲舒上書","比喻空有慾望而無行動"] },
+        { id:49, category:"趣味語文", title:"牛衣對泣 — 夫妻共度貧困", author:"成語典故", points:["漢代王章貧病睡牛衣，妻激勵他成就大事","比喻夫妻共度貧困"] },
+        { id:50, category:"趣味語文", title:"草木皆兵 — 疑神疑鬼、驚恐不安", author:"成語典故", points:["出自東晉淝水之戰","苻堅誤認草木為兵","形容驚恐不安，與杯弓蛇影意近"] },
+        { id:51, category:"中國語文教育", title:"華文雙語的過去、現在與未來【現在篇：塑造正確語言觀】", author:"陳健榮博士", points:["懶音與正音：語言自然演變，不應盲目崇拜古音","簡化論：中文特性為雙音節化（新冠）","粵語例子：阿陳、陳仔，不可單稱『陳』"] },
+        { id:52, category:"中國語文教育", title:"華宙金羅：菜牌中的中文知識", author:"蕭欣浩博士", points:["百年菜牌『華宙金羅』：螺片、雞片、雲腿","『羅』與『螺』同音，『宙』與『袖』同音","同音通假古已有之"] },
+        { id:53, category:"趣味語文", title:"五福臨門 — 五種福氣", author:"文化常識", points:["源於《書經·洪範》：「一曰壽，二曰富，三曰康寧，四曰攸好德，五曰考終命。」"] },
+        { id:54, category:"趣味語文", title:"三蘇 — 北宋父子文學家", author:"文化常識", points:["蘇洵、蘇軾、蘇轍，唐宋古文八大家佔其三","蘇洵《六國論》；蘇軾豪放派；蘇轍擅政論"] },
+        { id:55, category:"趣味語文", title:"孟姜女與寒衣節", author:"文化常識", points:["寒衣節農曆十月初一，與清明、中元並三大鬼節","孟姜女哭崩長城，滴血認骨，送寒衣習俗"] },
+        { id:56, category:"趣味語文", title:"中國四大名樓", author:"文化常識", points:["滕王閣、黃鶴樓、岳陽樓，第四座鸛雀樓或蓬萊閣","各樓代表作及別稱"] },
+        { id:57, category:"中國語文教育", title:"「湯」與「羹」 — 古今字義演變", author:"蕭欣浩博士", points:["古『湯』為熱水，今為湯品；古『羹』為調味液體，今為勾芡湯羹","演變歷程清晰"] },
+        { id:58, category:"中國語文教育", title:"「群龍無首」由褒變貶 — 成語豈能望文生義", author:"謝向榮教授", points:["出自《周易·乾卦》『見群龍无首，吉』原為褒義","今人誤解為一盤散沙，實則人人如龍各展所長"] },
+        { id:59, category:"趣味語文", title:"故宮為何稱為紫禁城", author:"文化常識", points:["紫微星垣為天帝居所，皇帝以天子自居用『紫』字","『禁』指皇宮守衛森嚴"] },
+        { id:60, category:"趣味語文", title:"黃花閨女 — 未出嫁少女", author:"文化常識", points:["菊花象徵貞節，或宋代壽陽公主梅花妝","指未出嫁少女"] },
+        { id:61, category:"趣味語文", title:"「殺青」的由來", author:"文化常識", points:["古代竹簡製作工序：火炙刮青防蟲","引申為書籍定稿或電影完成拍攝","茶葉加工亦稱殺青"] },
+        { id:62, category:"中國語文教育", title:"華文雙語的過去、現在與未來【未來篇：數碼時代下的華文雙語學習】", author:"陳健榮博士", points:["AI時代仍需努力學習中文，且要寫得比AI更好","實用數碼工具：漢語多功能字庫、深言達意等","寄語：善用科技，學會與機器合作"] },
+        { id:63, category:"趣味語文", title:"黃馬褂 — 清朝榮譽象徵", author:"文化常識", points:["馬褂為行服，黃色皇帝專用","三種獲賜情況：行職褂子、行圍褂子、武功褂子"] },
+        { id:64, category:"趣味語文", title:"竹林七賢 — 魏晉名士", author:"文化常識", points:["山濤、阮籍、劉伶、嵇康、向秀、阮咸、王戎","退隱山林，縱情玄學，為司馬氏不容"] },
+        { id:65, category:"趣味語文", title:"三從四德 — 古代婦德標準", author:"文化常識", points:["三從出自《儀禮·喪服》；四德出自《周禮·天官》"] },
+        { id:66, category:"中國語文教育", title:"常見錯別字 — 躁／燥", author:"常見錯別字", points:["『躁』情緒不安→脾氣暴躁","『燥』乾熱→天氣乾燥"] },
+        { id:67, category:"中國語文教育", title:"常見錯別字 — 凌晨／零時", author:"常見錯別字", points:["『凌晨』正寫，『凌』有接近之意","『零時』子夜時段"] },
+        { id:68, category:"趣味語文", title:"抵冷貪瀟湘 — 為靚而衣着單薄", author:"粵語俚語", points:["年輕女生為貪靚寒冷衣着單薄","『瀟湘』出自《紅樓夢》林黛玉或湖南瀟湘"] },
+        { id:69, category:"趣味語文", title:"有料扮四條 — 無實力卻裝有料", author:"粵語俚語", points:["『四條』撲克牌強牌型","形容沒有真才實學卻自以為很了不起"] },
+        { id:70, category:"趣味語文", title:"上好沉香當爛柴 — 有眼無珠、唔識貨", author:"粵語俚語", points:["沉香為四大名香之首，珍貴如金","形容不識貨、埋沒人才"] },
+        { id:71, category:"趣味語文", title:"一朝天子一朝臣 — 主事者更換，屬下亦換", author:"俗語常識", points:["清朝秦大士殿試巧妙回應乾隆，欽點狀元","原指新天子登基後朝臣更換"] },
+        { id:72, category:"中國語文教育", title:"詞性運用 — 詞語靈活轉換", author:"詞性運用", points:["中文詞語可靈活轉換詞性","練習：意外/豐富/決定之詞性變化"] },
+        { id:73, category:"趣味語文", title:"有眼不識泰山 — 見識淺窄，錯失人才", author:"俗語常識", points:["『泰山』為魯班徒弟，被淘汰後成巧匠","魯班感嘆有眼不識泰山"] },
+        { id:74, category:"中國語文教育", title:"詞性運用2 — 副詞的功能與分類", author:"詞性運用", points:["副詞分類：時間/頻度/程度/範圍/否定/語氣副詞","例句示範"] },
+        { id:75, category:"趣味語文", title:"無事不登三寶殿 — 上門必有事相求", author:"俗語常識", points:["『三寶殿』佛殿，三寶即佛、法、僧","引申為平時不上門，上門必有事"] },
+        { id:76, category:"中國語文教育", title:"結構助詞「的、地、得」的正確用法", author:"詞性運用", points:["的+名詞，地+動詞，得+補充說明","練習句子"] },
+        { id:77, category:"趣味語文", title:"小巫見大巫 — 相形見絀、無法相比", author:"俗語常識", points:["出自《莊子》逸文","三國張紘讀陳琳作品自愧不如"] },
+        { id:78, category:"中國語文教育", title:"量詞 — 名量詞與動量詞", author:"詞性運用", points:["量詞分名量、動量，搭配固定","練習：場/本/台/座"] },
+        // 詩詞賞析 79-84, 118-130 歸類為中國語文教育
+        { id:79, category:"中國語文教育", title:"詩詞賞析 — 王維《鳥鳴澗》", author:"詩詞賞析", points:["全詩：人閑桂花落，夜靜春山空。月出驚山鳥，時鳴春澗中。","以動襯靜，詩中有畫"] },
+        { id:80, category:"中國語文教育", title:"詩詞賞析 — 辛棄疾《醜奴兒·書博山道中壁》", author:"詩詞賞析", points:["全詞：少年不識愁滋味...卻道天涼好個秋。","少年強說愁，而今欲說還休"] },
+        { id:81, category:"中國語文教育", title:"詩詞賞析 — 李煜《破陣子·四十年來家國》", author:"詩詞賞析", points:["全詞：四十年來家國...垂淚對宮娥。","以『沈腰潘鬢』暗喻痛苦"] },
+        { id:82, category:"中國語文教育", title:"詩詞賞析 — 李清照《一剪梅》", author:"詩詞賞析", points:["📖 全詞：紅藕香殘玉簟秋。輕解羅裳，獨上蘭舟。雲中誰寄錦書來？雁字回時，月滿西樓。花自飄零水自流。一種相思，兩處閒愁。此情無計可消除，才下眉頭，卻上心頭。","🌸 李清照為宋詞婉約派代表人物，語言清新自然。","✨ 名句「此情無計可消除，才下眉頭，卻上心頭」形象刻畫思念無法排遣。","📝 後世稱其淺白清麗的詞風為「易安體」。"] },
+        { id:83, category:"中國語文教育", title:"詩詞賞析 — 陳子昂《登幽州台歌》", author:"詩詞賞析", points:["全詩：前不見古人，後不見來者。念天地之悠悠，獨愴然而涕下。","古體詩特點"] },
+        { id:84, category:"中國語文教育", title:"詩詞賞析 — 李商隱《無題》", author:"詩詞賞析", points:["📖 全詩：相見時難別亦難，東風無力百花殘。春蠶到死絲方盡，蠟炬成灰淚始乾。曉鏡但愁雲鬢改，夜吟應覺月光寒。蓬山此去無多路，青鳥殷勤為探看。","📜 李商隱為晚唐詩人，仕途不順，以「無題詩」著名。","🔥 名句「春蠶到死絲方盡，蠟炬成灰淚始乾」以絲（思）喻情思，以淚喻情淚。","🤔 有人認為詩中另有寄託，與其坎坷政治經歷有關。"] },
+        { id:85, category:"中國語文教育", title:"古今詞義對比 — 何謂「大事」", author:"盧鳴東教授", points:["粤語「大事si6」與「大肆si3」有別","儒家『大事』：送終、祭祀與軍事"] },
+        { id:86, category:"中國語文教育", title:"趣味學漢語 — 部首「坑」與「沆」", author:"星島中學學生報編輯部", points:["坑从土，沆从水，部件同亢，意義迥異"] },
+        { id:87, category:"中國語文教育", title:"新樂府與詩歌價值 — 白居易《上陽白髮人》", author:"陳美亞博士", points:["白居易提倡『文章合為時而著』","寫上陽宮女幽閉之苦，諷刺宮女制度"] },
+        { id:88, category:"中國語文教育", title:"「壽比南山」 — 從祝賀君臣到平民慶生", author:"盧鳴東教授", points:["出自《詩經·小雅·天保》","原指祝願國君王業千秋，後用於長者"] },
+        { id:89, category:"中國語文教育", title:"趣味學漢語 — 「令」與「伶」本義不同同有構字部件", author:"星島中學學生報編輯部", points:["令會意發命令，伶形聲聰明伶俐"] },
+        { id:90, category:"中國語文教育", title:"趣味學漢語 — 「湛」與「媅」遠古來的姓、氏", author:"星島中學學生報編輯部", points:["姓源母系社會，氏為姓分支","湛从水，媅从言，本義不同"] },
+        { id:91, category:"趣味語文", title:"趣味學漢語 — 「熙」與「曦」名字中的深層寓意", author:"星島中學學生報編輯部", points:["熙从火，本義曬乾引申光明和樂；曦从日，本義陽光","常用人名，熙多一重歡欣寓意"] },
+        { id:92, category:"趣味語文", title:"趣味學漢語 — 「笙」與「簫」歷史悠久的西安鼓樂", author:"星島中學學生報編輯部", points:["笙十三簧，簫參差管","西安鼓樂起源唐朝，非物質文化遺產"] },
+        { id:93, category:"中國語文教育", title:"粵語俚語、諺語、歇後語及其涵義", author:"歐亦修博士", points:["粵語保留中古漢語，『佢』古作『渠』","俚語：烚熟狗頭、滾水淥腳等"] },
+        { id:94, category:"趣味語文", title:"趣味學漢語 — 「匚」與「盒」祭祀的禮器", author:"星島中學學生報編輯部", points:["匚為方形食器，粵語『九大盒』九道大菜"] },
+        { id:95, category:"趣味語文", title:"趣味學漢語 — 「琴」與「瑟」音色合諧的樂器", author:"星島中學學生報編輯部", points:["琴瑟和鳴比喻夫妻，成語有琴瑟之好、琴瑟不調"] },
+        { id:96, category:"中國語文教育", title:"古今詞義的變化及其成因", author:"陳鴻圖博士", points:["湯本義熱水，府本義藏財寶之地","詞義演變反映社會文化變遷"] },
+        { id:97, category:"中國語文教育", title:"雙關語與歇後語 — 言在此意在彼", author:"語文知識", points:["雙關分語義/語音，歇後語前後兩部分","反語如『冤家』可指愛人"] },
+        { id:98, category:"趣味語文", title:"趣味學漢語 — 「炫」與「爍」字義相近从火生", author:"星島中學學生報編輯部", points:["炫光耀，爍光亮閃動，火部字"] },
+        { id:99, category:"趣味語文", title:"趣味學漢語 — 「擳」與「躤」字形相近易混淆", author:"星島中學學生報編輯部", points:["擳从手，擠壓；躤从足，登上","粵音同zai3，注意部首"] },
+        { id:100, category:"趣味語文", title:"趣味學漢語 — 「皎」與「潔」使用時須格外小心", author:"星島中學學生報編輯部", points:["皎從白，本義月亮潔白；潔從水，清潔","『皎潔』只用於月光"] },
+        { id:101, category:"趣味語文", title:"趣味學漢語 — 「觴」與「籌」競籌交錯現古代宴樂盛況", author:"星島中學學生報編輯部", points:["觴酒杯，籌投壺矢","觴籌交錯出自歐陽修《醉翁亭記》"] },
+        { id:102, category:"趣味語文", title:"趣味學漢語 — 「鐘」與「鼎」鐘鳴鼎食看古人奢侈排場", author:"星島中學學生報編輯部", points:["鐘樂器，鼎食器","鐘鳴鼎食出自《史記·貨殖列傳》"] },
+        { id:103, category:"趣味語文", title:"趣味學漢語 — 「匽」與「匿」多音多義易混淆", author:"星島中學學生報編輯部", points:["匽藏匿，匿逃亡隱藏，多音多義"] },
+        { id:104, category:"趣味語文", title:"趣味學漢語 — 「祭」與「祀」祭神祀祖的統稱", author:"星島中學學生報編輯部", points:["祭會意，祀形聲，香港春秋二祭非遺"] },
+        { id:105, category:"趣味語文", title:"趣味學漢語 — 「戕」與「戈」字形字義與兵器相關", author:"星島中學學生報編輯部", points:["戕殺害，戈兵器，『我』原為兵器"] },
+        { id:106, category:"趣味語文", title:"趣味學漢語 — 「萃」與「粹」通假字音同義不同", author:"星島中學學生報編輯部", points:["萃聚集，粹純粹，古時通假表憔悴"] },
+        { id: 107, category: "中國語文教育", title: "「逼」與「迫」——音同義近用法不同", author: "星島中學學生報編輯部、鴻文館文化工作室", points: ["📖 兩字均从辵，讀音相同（粵語bik1），但用法有別。", "⚠️ 『逼』可帶賓語：逼供、逼近、逼真。", "⚠️ 『迫』表緊急、急切：迫切、迫不及待。", "📌 兩字組成『逼迫』時，『迫』讀baak1（百）。"] },
+        { id: 108, category: "中國語文教育", title: "「藹」與「靄」——音同形近易混淆", author: "星島中學學生報編輯部、鴻文館文化工作室", points: ["📖 『藹』从艸，本義草木繁盛，引申為和氣：和藹可親。", "📖 『靄』从雨，本義雲氣、煙霧：雲靄、煙靄。", "⚠️ 兩字粵語均讀oi2，部首不同，字義迥異，不可混淆。"] },
+        { id: 109, category: "中國語文教育", title: "成語典故——三顧草廬", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《三國志》，劉備三次親赴隆中拜訪諸葛亮，誠懇邀請其輔助。", "🌟 比喻禮賢下士，誠心誠意邀請有才德之人。", "🏠 諸葛亮隱居臥龍崗，劉備三訪方得相見，終獲『隆中對』。"] },
+        { id: 110, category: "中國語文教育", title: "成語典故——刮目相待", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《三國志·吳書》，呂蒙發憤讀書，學識大進。", "🌟 魯肅感嘆：『非復吳下阿蒙！』呂蒙答：『士別三日，即更刮目相待。』", "💡 比喻拋開舊有看法，用新眼光看待人和事。"] },
+        { id: 111, category: "中國語文教育", title: "成語典故——七步成詩", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《世說新語》，曹丕命曹植七步內作詩，否則處死。", "📖 曹植應聲詠《七步詩》：『煮豆燃豆萁，豆在釜中泣；本是同根生，相煎何太急？』", "🌟 比喻才思敏捷，也暗喻兄弟相殘。"] },
+        { id: 112, category: "中國語文教育", title: "成語典故——望梅止渴", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《世說新語·假譎》，曹操征討張繡，途中缺水。", "🌟 曹操謊稱前方有大梅林，士兵口舌生津，精神振作，得以繼續前進。", "💡 比喻用空想或幻想安慰自己，實現無法達到的願望。"] },
+        { id: 113, category: "中國語文教育", title: "成語典故——手不釋卷", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《三國志·魏書》，曹丕自幼文武雙全。", "📖 曹丕八歲能騎射、熟讀百家，隨父出征，手中從不放下書本。", "🌟 比喻勤奮好學，珍惜時間讀書。"] },
+        { id: 114, category: "中國語文教育", title: "成語典故——初出茅廬", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 出自《三國演義》，諸葛亮初次用兵，火燒博望坡大敗曹軍。", "🌟 關羽、張飛原不服諸葛亮，此戰後佩服得五體投地。", "💡 比喻剛踏入社會或擔任新職，缺乏經驗。"] },
+        { id: 115, category: "中國語文教育", title: "第三屆 - 【抓出錯別字】鬼鬼祟祟 vs 鬼鬼崇崇", author: "比賽彙整", points: ["⚠️ 正確寫法：『鬼鬼祟祟』（祟从示，鬼魅作怪）。", "❌ 錯誤寫法：『鬼鬼崇崇』（崇从山，崇高）。", "📖 『祟』指行動隱密、不光明正大；『崇』指山大而高、高尚情操。"] },
+        { id: 116, category: "中國語文教育", title: "第三屆 - 【抓出錯別字】書籍 vs 書籍", author: "比賽彙整", points: ["⚠️ 正確寫法：『書籍』（籍从竹，古書以竹簡製成）。", "❌ 錯誤寫法：『書籍』（藉从艸，藉口、狼藉）。", "📖 『籍』本義登記冊、戶口冊；『藉』本義墊襯之物。"] },
+        { id: 117, category: "中國語文教育", title: "第三屆 - 【抓出錯別字】派遣 vs 派遣", author: "比賽彙整", points: ["⚠️ 正確寫法：『派遣』（遣从辵，差使、發送）。", "❌ 錯誤寫法：『派遣』（遺从辵，遺失、遺漏）。", "📖 『遣』有放走、差遣之意；『遺』有遺失、遺留之意。"] },
+        // 118-126 中國語文教育 詩詞賞析
+        { id: 118, category: "中國語文教育", title: "孟浩然《宿建德江》——遠遊思親", author: "鴻文館文化工作室", points: ["📖 全詩：移舟泊煙渚，日暮客愁新。野曠天低樹，江清月近人。", "🌅 傍晚泊舟煙霧江洲，陌生環境引發淡淡哀愁。", "🌳 野曠天低樹：天地廣闊，個人渺小無依。", "🌕 江清月近人：月影清晰似觸手可及，卻只感江水寒冷，思鄉之情更深。"] },
+        { id: 119, category: "中國語文教育", title: "劉禹錫《秋詞》——秋日勝春朝", author: "鴻文館文化工作室", points: ["📖 全詩：自古逢秋悲寂寥，我言秋日勝春朝。晴空一鶴排雲上，便引詩情到碧霄。", "🍂 反傳統悲秋觀，獨愛秋日勝春，充滿生機。", "🐦 晴空一鶴：白鶴展翅穿雲，引發詩情至碧霄。", "🌈 秋景描寫：金黃麥浪、紅柿黃橘、紅楓金銀杏，多姿多彩。"] },
+        { id: 120, category: "中國語文教育", title: "白居易《暮江吟》——初秋新月之美", author: "鴻文館文化工作室", points: ["📖 全詩：一道殘陽鋪水中，半江瑟瑟半江紅。可憐九月初三夜，露似真珠月似弓。", "🌇 殘陽鋪江：半江紅霞半江翠綠，色彩交融如畫。", "🌙 九月初三夜：新月如弓，露珠晶瑩似珍珠。", "💧 讚歎大自然和諧之美。"] },
+        { id: 121, category: "中國語文教育", title: "陳子昂《登幽州臺歌》——懷才不遇", author: "星島小學學生報編輯部、鴻文館文化工作室", points: ["📖 全詩：前不見古人，後不見來者。念天地之悠悠，獨愴然而涕下！", "🏔️ 懷才不遇，抒發報國大志與孤獨悲涼。", "🌌 天地悠悠：古今賢君難遇，人生有限，感慨生不逢時。", "🏛️ 現代啟示：珍惜學習機會，服務社會。"] },
+        { id: 122, category: "中國語文教育", title: "李白《峨眉山月歌》——清秀山月", author: "鴻文館文化工作室", points: ["📖 全詩：峨眉山月半輪秋，影入平羌江水流。夜發清溪向三峽，思君不見下渝州。", "🌕 秋夜峨眉山月，描寫清秀山川與旅途思念。", "⛵ 夜發清溪：小舟疾行三峽，思念親友。", "🌊 江月交融：月影隨波晃動，展現自然與情感合一。"] },
+        { id: 123, category: "中國語文教育", title: "王昌齡《芙蓉樓送辛漸》——送別好友", author: "鴻文館文化工作室", points: ["📖 全詩：寒雨連江夜入吳，平明送客楚山孤。洛陽親友如相問，一片冰心在玉壺。", "❄️ 寒雨連江，平明送客，楚山孤寂。", "🌟 冰心玉壺：表達自身清白純潔、不媚權貴的品格。", "🤝 託付親友：轉告洛陽親友，自己堅守理想。"] },
+        { id: 124, category: "中國語文教育", title: "李白《獨坐敬亭山》——流離後以景寄情", author: "鴻文館文化工作室", points: ["📖 全詩：眾鳥高飛盡，孤雲獨去閒。相看兩不厭，只有敬亭山。", "🏔️ 安史之亂後流離漂泊，晚年登敬亭山寄託孤獨。", "⛰️ 敬亭山為唯一知己：山有情，人無情，帶來心靈安慰。", "🌲 山川永恆，人生短暫，寄託寧靜心境。"] },
+        { id: 125, category: "中國語文教育", title: "李商隱《登樂遊原》——韶光易逝", author: "鴻文館文化工作室", points: ["📖 全詩：向晚意不適，驅車登古原。夕陽無限好，只是近黃昏。", "🌅 黃昏登高，感慨韶光易逝、盛衰無常。", "🌇 夕陽無限好：美景留戀，卻近黃昏，象徵轉瞬即逝。", "🚶 驅車古原：心情低落，借景抒發唏噓之情。"] },
+        { id: 126, category: "中國語文教育", title: "王維《畫》——詩畫交融", author: "鴻文館文化工作室", points: ["📖 全詩：遠看山有色，近聽水無聲。春去花還在，人來鳥不驚。", "🖼️ 詩畫交融，描寫畫中和諧自然的生活。", "🏞️ 畫中世界：山色、水光、花鳥人物永恆和諧。", "🐦 人來鳥不驚：萬物和平共處，展現自在安泰境界。"] },
+        { id: 127, category: "中國語文教育", title: "林升《題臨安邸》——表面讚揚暗諷朝廷", author: "星島中學學生報編輯部、鴻文館文化工作室", points: ["📖 全詩：山外青山樓外樓，西湖歌舞幾時休？暖風熏得遊人醉，直把杭州作汴州。", "🌟 表面讚揚西湖繁華美景，實則暗諷南宋朝廷苟且偷安。", "😡 悲憤核心：把杭州當作舊都汴州，忘記收復中原。", "📜 歷史背景：金人攻陷汴京，南遷臨安，朝廷沉迷歌舞。"] },
+        { id: 128, category: "中國語文教育", title: "杜甫《贈花卿》——看似讚揚暗地諷勸", author: "星島中學學生報編輯部、鴻文館文化工作室", points: ["📖 全詩：錦城絲管日紛紛，半入江風半入雲。此曲只應天上有，人間能得幾回聞。", "🎶 表面讚揚花敬定府中音樂奢華，實則暗諷武將僭越奢靡。", "🏛️ 背景：唐肅宗時武將花敬定平叛後生活如皇帝。", "⚠️ 杜甫胸懷正直，勸勉功臣勿輕視上級。"] },
+        { id: 129, category: "中國語文教育", title: "杜甫《蜀相》——讚揚諸葛亮鞠躬盡瘁", author: "鴻文館文化工作室", points: ["📖 全詩：丞相祠堂何處尋？錦官城外柏森森。映階碧草自春色，隔葉黃鸝空好音。三顧頻煩天下計，兩朝開濟老臣心。出師未捷身先死，長使英雄淚滿襟。", "🌟 杜甫春日訪武侯祠，讚揚諸葛亮鞠躬盡瘁、輔佐兩朝。", "👑 三顧茅廬、天下大計，老臣忠心可鑑。", "😢 出師未捷身先死，令後世英雄淚滿襟。"] },
+        { id: 130, category: "中國語文教育", title: "朱熹《春日》——虛構遊春暗喻尋道", author: "鴻文館文化工作室", points: ["📖 全詩：勝日尋芳泗水濱，無邊光景一時新。等閒識得東風面，萬紫千紅總是春。", "🌸 泗水為孔子講學聖地，『尋芳』實為『尋道』。", "🌬️ 悟道後身心煥然一新，人生有導引，視野開闊。", "📖 理學寓意：不悟道則內心荒蕪，白白過一生。"] },
+        { id: 131, category: "中國語文教育", title: "「六項全能」歐陽修", author: "凌頌榮教授", points: ["📖 經學：著《詩本義》、《易童子問》，打破漢唐注疏。", "📖 史學：主修《新唐書》、《新五代史》，入二十五史。", "📖 文學：《醉翁亭記》、《秋聲賦》、《六一詩話》（最早詩話）。", "📖 書法：推崇顏真卿，改名『脩』出於美學追求。", "📖 譜學：開創『歐體』族譜體式，與蘇洵並立。", "📖 金石學：編《集古錄》，創立金石學。"] },
+        { id: 132, category: "中國語文教育", title: "成語——詞彙中的瑰寶", author: "施仲謀教授", points: ["📖 成語來源：歷史故事（臥薪嘗膽）、古代寓言（東施效顰）、古代詩文、俗語。", "⚠️ 注意古今字義：『尾大不掉』中『掉』為搖動，非掉落。", "💡 正確理解整體含義，如『水落石出』比喻真相顯露。", "📌 注意褒貶義：『同仇敵愾』褒義，『同流合污』貶義。"] },
+        { id: 133, category: "中國語文教育", title: "「詩仙」李白", author: "施仲謀教授", points: ["📖 賀知章稱李白為『謫仙』（貶落凡間之仙人）。", "🍶 杜甫《飲中八仙歌》：『天子呼來不上船，自稱臣是酒中仙。』", "👞 借酒裝瘋令高力士脫靴，展現不怕權貴性格。", "✨ 詩歌熱情奔放、想像豐富：『白髮三千丈』、『黃河之水天上來』、『飛流直下三千尺』。"] },
+        { id: 134, category: "中國語文教育", title: "古今詞義對比——談「烈士」與「犧牲」", author: "伍鈞鈞博士", points: ["📖 古義『烈士』：胸懷壯志之人（曹操『烈士暮年，壯心不已』），不必然捐軀。", "📖 今義『烈士』：專指為國家或公共價值犧牲生命者。", "📖 古義『犧牲』：祭祀所用牲畜（牛羊全體），名詞。", "📖 今義『犧牲』：動詞，指捨棄利益、權益或生命。"] },
+        { id: 135, category: "中國語文教育", title: "第四屆 - 【常見錯別字一】贗品 vs 膺品", author: "比賽彙整", points: ["⚠️ 正確寫法：『贗品』（贗从貝，偽造、仿冒）。", "❌ 錯誤寫法：『膺品』（膺从肉，胸膛、內心）。", "📖 『義憤填膺』：內心充滿正義激起的憤怒。", "📖 『榮膺』：接受、當選（如榮膺影帝）。"] },
+        { id: 136, category: "中國語文教育", title: "第四屆 - 【常見錯別字二】斐 vs 蜚", author: "比賽彙整", points: ["📖 『斐』从文：文采斐然、成就斐然（顯著）。", "📖 『蜚』从虫：蜚聲國際（與『飛』通）、流言蜚語（不實）。", "⚠️ 注意讀音：『蜚』作『飛』時讀ei1，作『蜚蠊』時讀ei2。"] },
+        { id: 137, category: "中國語文教育", title: "第四屆 - 【常見錯別字三】矇矓 vs 朦朧", author: "比賽彙整", points: ["⚠️ 『矇矓』从目：主觀感官模糊，如『睡眼矇矓』、『淚眼矇矓』。", "⚠️ 『朦朧』从月：客觀景象模糊，如『月色朦朧』、『煙霧朦朧』。"] },
+        { id: 138, category: "中國語文教育", title: "第四屆 - 【常見錯別字四】不恥 vs 不齒", author: "比賽彙整", points: ["📖 『不恥』：不覺得丟臉（正面），如『不恥下問』。", "📖 『不齒』：鄙視、不與為伍（負面），如『為人所不齒』。", "⚠️ 兩者讀音相同，意思完全相反，須嚴格區分。"] },
+        { id: 139, category: "中國語文教育", title: "第四屆 - 【常見錯別字五】各適其適／實事求是", author: "比賽彙整", points: ["📖 『各適其適』：第一個『適』為動詞『往』，第二個為名詞『合適』；意為各自去做自己適合的事。", "❌ 常見錯誤寫法：『各適其式』。", "📖 『實事求是』：『是』指正確的道理、真相；出自《漢書》讚揚河間獻王劉德。", "❌ 錯誤寫法：『實事求事』（語義不通）。"] },
+        { id: 140, category: "中國語文教育", title: "外來詞和文言詞兼容", author: "施仲謀教授", points: ["📖 外來詞（借詞）分三類：音譯（士多、派對、嘉年華、車厘子、白蘭地、模特兒）、意譯（電話、話筒）、音義兼譯（引擎、幽默、俱樂部、維他命、烏托邦）。", "📖 文言詞沿用：現代漢語仍保留古漢語虛詞，如『之』、『是』、『然』、『而』、『以』、『乃』、『何』。", "📖 成語中保存文言詞，如『一息尚存』的『息』（呼吸）、『爾虞我詐』的『爾』、『虞』、『固若金湯』的『金』（金屬）、『湯』（開水）。", "⚠️ 使用文言詞應避免文白夾雜，自然融入現代漢語。"] },
+        { id: 141, category: "中國語文教育", title: "青出於藍勝於藍", author: "歐亦修講師", points: ["📖 出自《荀子·勸學》：『青，取之於藍，而青於藍。』藍指蓼藍植物，靛青色澤更勝原植物。", "📖 荀子比喻學習不能停滯，應精益求精，後引申為『一代新人勝舊人』。", "📖 青色在中國傳統文化中地位重要：《尚書》五色（青赤白黑黃）之一，象徵東方（青龍）。", "📖 青釉瓷器、青花瓷通過絲綢之路及海上貿易遠銷海外，帶領中華文化走向國際。"] },
+        { id: 142, category: "中國語文教育", title: "說話幽默的魏晉名士", author: "潘銘基教授", points: ["📖 出自《世說新語》。郝隆七月七日仰臥曬書，幽默自嘲滿腹學問。", "📖 王戎七歲見路邊李樹多子，推斷為苦李，展現推理智慧。", "📖 王子猷雪夜乘舟訪戴安道，至門不入：『乘興而行，興盡而返，何必見戴？』率性而為。", "🎭 魏晉名士幽默往往任性自然，注重過程而非結果。"] },
+        { id: 143, category: "中國語文教育", title: "第四屆 - 【常見錯別字六】自詡、自翊、自栩", author: "比賽彙整", points: ["⚠️ 『自詡』（音heo2）正寫，意為誇口、說大話。《明史》例：『反自詡其功』。", "⚠️ 『栩栩』（音heo2）生動傳神，如『栩栩如生』。《莊子·齊物論》莊周夢蝶。", "⚠️ 『翊』（音jik6）通『翼』，輔助、飛翔，用於『輔翊』（輔佐朝政）或人名（朱翊鈞、孫翊）。", "❌ 常見錯誤：『自翊』、『自栩』均為錯別字。"] },
+        { id: 145, category: "中國語文教育", title: "第四屆 - 【成語解構二】秦晉之好", author: "比賽彙整", points: ["📖 出自春秋時期秦國與晉國世代聯姻。晉獻公嫁女給秦穆公（秦穆夫人）；晉文公重耳娶秦穆公之女文贏。", "📖 後世以『秦晉之好』或『互結秦晉』指兩姓聯姻，關係親近。", "📖 用例：《三國演義》『永結秦晉之好』、《三俠五義》『結為秦晉之好』。", "近義詞：朱陳之好；反義詞：勞燕分飛。"] },
+        { id: 146, category: "中國語文教育", title: "第四屆 - 【成語解構三】犬馬之勞", author: "比賽彙整", points: ["📖 出自《漢書·孔光傳》：『臣光智謀淺短，犬馬齒臷誠恐一旦顛仆，無以報。』臣子自謙願如犬馬為君主效力。", "📖 又見《水滸傳》：『李某不才……願施犬馬之勞。』", "💡 比喻心甘情願為人效勞，任人使喚。例句：『你對我恩重如山，日後我定當效犬馬之勞。』"] },
+        { id: 147, category: "中國語文教育", title: "第四屆 - 【成語解構四】孑然一身", author: "比賽彙整", points: ["📖 『孑』音kit3（粵語揭），意為單獨、孤獨。出自《三國志》：公孫淵謀反，陸珪上書稱其『孑然無所藉』（孤立無援）。", "💡 形容孤獨一人，常用於無親無故的情況。例句：『他在異鄉無親無故，直到晚年依然孑然一身。』", "📖 另見『孑遺』（殘存者）。"] },
+        { id: 148, category: "中國語文教育", title: "第四屆 - 【成語解構五】焚膏繼晷", author: "比賽彙整", points: ["📖 出自韓愈《進學解》：『焚膏油以繼晷，恒兀兀以窮年。』膏指油脂（燈燭），晷指日影、日光。", "💡 形容夜以繼日勤奮讀書或工作。例句：『他焚膏繼晷地苦讀，終於考上理想大學。』", "近義詞：廢寢忘食、孜孜不倦；反義詞：飽食終日、玩日愒歲。"] },
+        { id: 149, category: "中國語文教育", title: "第四屆 - 【成語解構六】蜀犬吠日", author: "比賽彙整", points: ["📖 出自唐朝詩人岑參《招北客文》：蜀地（成都）終年潮濕多雨，少見太陽，狗見日出而驚慌對天吠叫。", "💡 比喻少見多怪，譏諷人見識淺薄、大驚小怪。例句：『大家應該擴闊視野，才不會蜀犬吠日，惹人笑話。』", "近義詞：粵牛喘月；反義詞：見怪不怪。"] },
+        { id: 150, category: "中國語文教育", title: "第四屆 - 【成語解構七】礎潤而雨", author: "比賽彙整", points: ["📖 出自蘇洵《辨姦論》：『月暈而風，礎潤而雨，人人知之。』礎指柱下石墩，濕潤則預示將下雨。", "💡 比喻從微小跡象可推知事物真相與發展。例句：『服務業必須有礎潤而雨的洞察力，才能理解顧客需要。』", "近義詞：一葉知秋、見微知著；反義詞：以偏概全、坐井觀天。"] }
+    ];
+
+    // 排序確保編號順序
+    const finalData = [...articlesData].sort((a,b) => a.id - b.id);
+
+    function renderTable(filterCategory = "all", searchTerm = "") {
+        const tbody = document.getElementById("tableBody");
+        let filtered = [...finalData];
+        if (filterCategory !== "all") {
+            filtered = filtered.filter(item => item.category === filterCategory);
+        }
+        if (searchTerm.trim() !== "") {
+            const term = searchTerm.trim().toLowerCase();
+            filtered = filtered.filter(item => {
+                const titleMatch = item.title.toLowerCase().includes(term);
+                const authorMatch = (item.author && item.author.toLowerCase().includes(term)) || false;
+                const pointsMatch = item.points.some(p => p.toLowerCase().includes(term));
+                return titleMatch || authorMatch || pointsMatch;
+            });
+        }
+        document.getElementById("statsCount").innerText = `顯示 ${filtered.length} 篇文章`;
+        if (filtered.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="2" style="text-align:center; padding:40px;">🔍 沒有符合條件的文章，請調整篩選或關鍵字</td></tr>`;
+            return;
+        }
+        let html = "";
+        filtered.forEach(article => {
+            const catClass = article.category === "趣味語文" ? "cat-趣味語文" : "cat-中國語文教育";
+            const catZh = article.category;
+            let pointsHtml = `<ul>`;
+            article.points.forEach(p => {
+                let displayPoint = p;
+                if (searchTerm.trim() !== "") {
+                    const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                    displayPoint = p.replace(regex, `<span class="highlight">$1</span>`);
+                }
+                pointsHtml += `<li>${displayPoint}</li>`;
+            });
+            pointsHtml += `</ul>`;
+            if (article.author && article.author !== "") {
+                pointsHtml += `<div style="font-size:0.75rem; color:#9b7b5c; margin-top:8px;">✍️ 供稿：${article.author}</div>`;
+            }
+            html += `
+                <tr>
+                    <td style="background:#fefaf2;">
+                        <div class="article-num">#${article.id}</div>
+                        <div class="cat-tag ${catClass}">${catZh}</div>
+                        <div style="font-weight:700; font-size:1.05rem; margin:8px 0 4px;">${article.title}</div>
+                    </td>
+                    <td>${pointsHtml}</td>
+                </tr>
+            `;
+        });
+        tbody.innerHTML = html;
+    }
+
+    let currentFilter = "all";
+    let currentSearch = "";
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const searchInput = document.getElementById("searchInput");
+
+    function update() { renderTable(currentFilter, currentSearch); }
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentFilter = btn.getAttribute("data-filter");
+            update();
+        });
+    });
+    searchInput.addEventListener("input", (e) => {
+        currentSearch = e.target.value;
+        update();
+    });
+    renderTable("all", "");
+</script>
+</body>
+</html>
